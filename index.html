@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da Tommy — Pizzeria dal 1978</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Da Tommy, pizzeria a conduzione familiare dal 1978. Forno a legna, prenotazioni, menu, orari e indicazioni stradali.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Da Tommy">
+<meta property="og:title" content="Da Tommy — Pizzeria dal 1978">
+<meta property="og:description" content="Pizzeria e ristorante a conduzione familiare a Nogara (VR). Forno a legna dal 1978, menu, prenotazioni e orari.">
+<meta property="og:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+<meta property="og:url" content="https://menny28.github.io/Da-Tommy/">
+<meta property="og:locale" content="it_IT">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Da Tommy — Pizzeria dal 1978">
+<meta name="twitter:description" content="Forno a legna dal 1978. Menu, prenotazioni, orari e indicazioni stradali.">
+<meta name="twitter:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">Da <span>Tommy</span></a>
+    <nav class="nav-links">
+      <a href="index.html#orari" class="current">Orari &amp; recapiti</a>
+      <a href="menu.html">Menu</a>
+      <a href="galleria.html">Locale</a>
+      <a href="prenota.html">Prenota</a>
+      <a href="storia.html">Chi siamo</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="tel:+393665488260" class="btn btn-outline">☏ +39 366 548 8260</a>
+      <a href="prenota.html" class="btn btn-primary">Prenota</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu">☰</button>
+  </div>
+</div>
+
+<a href="tel:+393665488260" class="call-fab" aria-label="Chiama Da Tommy">☏</a>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div id="embers"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="stamp">DAL<b>1978</b>FORNO A LEGNA</div>
+      <h1>Pizza<br>come una<br><em>volta.</em></h1>
+      <p class="lede">Tre generazioni della famiglia Tommy, un forno a legna che non si è mai spento e un impasto che riposa 48 ore. Vieni a trovarci, oppure chiama: ti teniamo il tavolo.</p>
+      <div class="hero-actions">
+        <a href="tel:+393665488260" class="btn btn-primary">☏ Chiama e prenota</a>
+        <a href="menu.html" class="btn btn-outline">Guarda il menu</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>48h</strong>lievitazione impasto</div>
+        <div><strong>N.36</strong>pizze in carta</div>
+        <div><strong>1978</strong>apertura del forno</div>
+      </div>
+    </div>
+    <div class="oven">
+      <div class="steam"></div>
+      <div class="steam"></div>
+      <div class="steam"></div>
+      <div class="pizza-plate">
+        <img src="images/pizza_dall_alto.jpeg" alt="Pizza Margherita di Da Tommy vista dall'alto">
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tear"></div>
+
+<!-- ================= RECAPITI + ORARI + METEO ================= -->
+<section class="section section--gap-top photo-bg" style="--bg-photo:url('images/bancone_pizzeria.jpeg')" id="orari">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Recapiti &amp; orari</div>
+        <h2>Tutto il necessario</h2>
+      </div>
+      <p>L'orario qui sotto si aggiorna da solo: sai sempre se siamo aperti prima ancora di chiamare.</p>
+    </div>
+    <div class="split">
+      <div class="panel reveal">
+        <div class="eyebrow">Contatti</div>
+        <ul class="contact-list">
+          <li><a href="tel:+393665488260">☏ +39 366 548 8260</a></li>
+          <li><a href="mailto:studiomenny.web@gmail.com">✉ studiomenny.web@gmail.com</a></li>
+          <li>📍 Via P. Sterzi 41<br>Nogara (VR)</li>
+        </ul>
+      </div>
+      <div class="panel reveal">
+        <div class="status-badge" id="statusBadge"><span class="status-dot"></span><span id="statusText">Verifica in corso…</span></div>
+        <div id="hoursList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tear up"></div>
+
+<!-- ================= MAPPA ================= -->
+<section class="section" id="mappa">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Dove siamo</div>
+        <h2>Vieni a trovarci</h2>
+      </div>
+      <p>Via P. Sterzi 41, Nogara (VR) — parcheggio disponibile nelle vicinanze.</p>
+    </div>
+    <div class="map-wrap reveal" id="mapWrap">
+      <div class="map-consent" id="mapConsent">
+        <p>La mappa è fornita da Google e si carica solo con il tuo consenso.</p>
+        <button type="button" class="btn btn-primary" data-load-map>Mostra la mappa</button>
+      </div>
+    </div>
+    <div class="map-actions">
+      <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Via+P.+Sterzi+41,+Nogara+VR">📍 Indicazioni stradali</a>
+      <a class="btn btn-outline" href="tel:+393665488260">☏ Chiama per info</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo footer-logo">Da <span>Tommy</span></div>
+        <p class="footer-desc">Pizzeria a conduzione familiare dal 1978. Forno a legna, impasto a lunga lievitazione, sempre la stessa famiglia.</p>
+      </div>
+      <div>
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="tel:+393665488260">☏ +39 366 548 8260</a></li>
+          <li><a href="mailto:studiomenny.web@gmail.com">studiomenny.web@gmail.com</a></li>
+          <li>Via P. Sterzi 41, Nogara (VR)</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Link rapidi</h5>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="prenota.html">Prenota</a></li>
+          <li><a href="galleria.html">Locale</a></li>
+          <li><a href="index.html#mappa">Dove siamo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Da Tommy · P.IVA 00000000000</span>
+      <span class="foot-legal"><a href="legale.html#note-legali">Note legali</a> · <a href="legale.html#privacy">Privacy</a> · <a href="legale.html#cookie">Cookie</a> · <button type="button" data-cookie-prefs>Preferenze cookie</button></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

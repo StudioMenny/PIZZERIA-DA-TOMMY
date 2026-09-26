@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Da Tommy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Il menu di Da Tommy: pizze cotte nel forno a legna e piatti del ristorante, primi e secondi.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Da Tommy">
+<meta property="og:title" content="Menu — Da Tommy">
+<meta property="og:description" content="Pizze e piatti del ristorante Da Tommy, forno a legna dal 1978.">
+<meta property="og:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+<meta property="og:url" content="https://menny28.github.io/Da-Tommy/menu.html">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">Da <span>Tommy</span></a>
+    <nav class="nav-links">
+      <a href="index.html#orari">Orari &amp; recapiti</a>
+      <a href="menu.html" class="current">Menu</a>
+      <a href="galleria.html">Locale</a>
+      <a href="prenota.html">Prenota</a>
+      <a href="storia.html">Chi siamo</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="tel:+393665488260" class="btn btn-outline">☏ +39 366 548 8260</a>
+      <a href="prenota.html" class="btn btn-primary">Prenota</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu">☰</button>
+  </div>
+</div>
+
+<a href="tel:+393665488260" class="call-fab" aria-label="Chiama Da Tommy">☏</a>
+
+<section class="page-hero photo-bg" style="--bg-photo:url('images/margherita_appena_sfornata.jpeg')">
+  <div class="wrap">
+    <div class="eyebrow">La carta</div>
+    <h1>Il menu</h1>
+    <p>Pizzeria e ristorante sotto lo stesso tetto: scegli la carta che ti interessa.</p>
+  </div>
+</section>
+
+<section class="section photo-bg" style="--bg-photo:url('images/bancone_pizzeria.jpeg')" id="menu">
+  <div class="wrap">
+    <div class="menu-tabs" id="menuTabs">
+      <button class="tab-btn active" data-tab="pizze">🍕 Pizze</button>
+      <button class="tab-btn" data-tab="ristorante">🍽️ Ristorante</button>
+    </div>
+
+    <div id="pizzeWrap">
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="tutte">Tutte</button>
+        <button class="chip" data-filter="veg">🌿 Vegetariane</button>
+        <button class="chip" data-filter="gf">🌾 Senza glutine</button>
+        <button class="chip" data-filter="hot">🌶️ Piccanti</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+
+    <div id="ristoranteWrap" style="display:none;">
+      <div id="ristoranteGrid"></div>
+    </div>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-photo" id="modalPhoto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 15l-5-4-4 4-3-2-6 5"/></svg>
+      <span>Foto in arrivo</span>
+    </div>
+    <div class="modal-body">
+      <h3 id="modalName"></h3>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalDesc"></p>
+      <div class="tags" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo footer-logo">Da <span>Tommy</span></div>
+        <p class="footer-desc">Pizzeria a conduzione familiare dal 1978. Forno a legna, impasto a lunga lievitazione, sempre la stessa famiglia.</p>
+      </div>
+      <div>
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="tel:+393665488260">☏ +39 366 548 8260</a></li>
+          <li><a href="mailto:studiomenny.web@gmail.com">studiomenny.web@gmail.com</a></li>
+          <li>Via P. Sterzi 41, Nogara (VR)</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Link rapidi</h5>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="prenota.html">Prenota</a></li>
+          <li><a href="galleria.html">Locale</a></li>
+          <li><a href="index.html#mappa">Dove siamo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Da Tommy · P.IVA 00000000000</span>
+      <span class="foot-legal"><a href="legale.html#note-legali">Note legali</a> · <a href="legale.html#privacy">Privacy</a> · <a href="legale.html#cookie">Cookie</a> · <button type="button" data-cookie-prefs>Preferenze cookie</button></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

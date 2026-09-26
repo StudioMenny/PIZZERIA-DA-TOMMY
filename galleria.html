@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il locale — Da Tommy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Uno sguardo al locale di Da Tommy: sala, forno a legna e ambiente, a Nogara (VR).">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Da Tommy">
+<meta property="og:title" content="Il locale — Da Tommy">
+<meta property="og:description" content="Sala, forno a legna e ambiente della pizzeria Da Tommy.">
+<meta property="og:image" content="https://menny28.github.io/Da-Tommy/images/sala.jpeg">
+<meta property="og:url" content="https://menny28.github.io/Da-Tommy/galleria.html">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://menny28.github.io/Da-Tommy/images/sala.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">Da <span>Tommy</span></a>
+    <nav class="nav-links">
+      <a href="index.html#orari">Orari &amp; recapiti</a>
+      <a href="menu.html">Menu</a>
+      <a href="galleria.html" class="current">Locale</a>
+      <a href="prenota.html">Prenota</a>
+      <a href="storia.html">Chi siamo</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="tel:+393665488260" class="btn btn-outline">☏ +39 366 548 8260</a>
+      <a href="prenota.html" class="btn btn-primary">Prenota</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu">☰</button>
+  </div>
+</div>
+
+<a href="tel:+393665488260" class="call-fab" aria-label="Chiama Da Tommy">☏</a>
+
+<section class="page-hero photo-bg" style="--bg-photo:url('images/sala.jpeg')">
+  <div class="wrap">
+    <div class="eyebrow">Galleria</div>
+    <h1>Il locale</h1>
+    <p>Uno sguardo al locale, prima di venire a trovarci.</p>
+  </div>
+</section>
+
+<section class="section" id="galleria">
+  <div class="wrap">
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+<div class="tear up"></div>
+
+<!-- ================= RECENSIONI ================= -->
+<section class="section photo-bg" style="--bg-photo:url('images/dehors_pizzeria.jpeg')" id="recensioni">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Cosa dicono di noi</div>
+        <h2>Recensioni</h2>
+      </div>
+      <p>Una selezione di commenti lasciati dai clienti.</p>
+    </div>
+    <div class="reviews-track">
+      <div class="review-card reveal"><div class="stars">★★★★★</div><p>"L'impasto è leggerissimo, e si sente che il forno a legna fa la differenza. La marinara è la migliore che abbia mai mangiato."</p><div class="review-who">— Elena F.</div></div>
+      <div class="review-card reveal"><div class="stars">★★★★★</div><p>"Locale a conduzione familiare, si vede subito. Personale gentilissimo e tempi di attesa onesti anche il sabato sera."</p><div class="review-who">— Davide R.</div></div>
+      <div class="review-card reveal"><div class="stars">★★★★☆</div><p>"Ottima anche l'opzione senza glutine, finalmente una pizzeria dove non mi sento un cliente di serie B."</p><div class="review-who">— Chiara M.</div></div>
+      <div class="review-card reveal"><div class="stars">★★★★★</div><p>"Prenotato per telefono in un minuto, tavolo pronto all'orario esatto. Piccola cosa ma fa la differenza."</p><div class="review-who">— Andrea S.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo footer-logo">Da <span>Tommy</span></div>
+        <p class="footer-desc">Pizzeria a conduzione familiare dal 1978. Forno a legna, impasto a lunga lievitazione, sempre la stessa famiglia.</p>
+      </div>
+      <div>
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="tel:+393665488260">☏ +39 366 548 8260</a></li>
+          <li><a href="mailto:studiomenny.web@gmail.com">studiomenny.web@gmail.com</a></li>
+          <li>Via P. Sterzi 41, Nogara (VR)</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Link rapidi</h5>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="prenota.html">Prenota</a></li>
+          <li><a href="galleria.html">Locale</a></li>
+          <li><a href="index.html#mappa">Dove siamo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Da Tommy · P.IVA 00000000000</span>
+      <span class="foot-legal"><a href="legale.html#note-legali">Note legali</a> · <a href="legale.html#privacy">Privacy</a> · <a href="legale.html#cookie">Cookie</a> · <button type="button" data-cookie-prefs>Preferenze cookie</button></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

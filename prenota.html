@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prenota — Da Tommy</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Prenota un tavolo da Da Tommy per telefono o WhatsApp. Asporto e consegna a domicilio a Nogara (VR).">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Da Tommy">
+<meta property="og:title" content="Prenota — Da Tommy">
+<meta property="og:description" content="Prenota un tavolo, ordina in asporto o a domicilio da Da Tommy.">
+<meta property="og:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+<meta property="og:url" content="https://menny28.github.io/Da-Tommy/prenota.html">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://menny28.github.io/Da-Tommy/images/pizza_dall_alto.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">Da <span>Tommy</span></a>
+    <nav class="nav-links">
+      <a href="index.html#orari">Orari &amp; recapiti</a>
+      <a href="menu.html">Menu</a>
+      <a href="galleria.html">Locale</a>
+      <a href="prenota.html" class="current">Prenota</a>
+      <a href="storia.html">Chi siamo</a>
+    </nav>
+    <div class="topbar-actions">
+      <a href="tel:+393665488260" class="btn btn-outline">☏ +39 366 548 8260</a>
+      <a href="prenota.html" class="btn btn-primary">Prenota</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu">☰</button>
+  </div>
+</div>
+
+<a href="tel:+393665488260" class="call-fab" aria-label="Chiama Da Tommy">☏</a>
+
+<section class="page-hero photo-bg" style="--bg-photo:url('images/dehors_pizzeria.jpeg')">
+  <div class="wrap">
+    <div class="eyebrow">Prenotazione</div>
+    <h1>Prenota un tavolo</h1>
+    <p>Preferisci la voce? Chiamaci al <strong>+39 366 548 8260</strong>. Se no, compila qui: si apre WhatsApp con il messaggio già pronto da inviarci — ti confermiamo noi la prenotazione!</p>
+  </div>
+</section>
+
+<section class="section on-farina photo-bg" style="--bg-photo:url('images/pizza_dall_alto.jpeg')" id="prenota">
+  <div class="wrap">
+    <div class="split split-3 split--gap-lg">
+      <div class="panel panel-light reveal">
+        <div class="eyebrow">🥡 Asporto</div>
+        <h3>Pronta quando arrivi</h3>
+        <p>Chiama, ordina e passa a ritirare: nessun costo aggiuntivo. Ti diamo un orario indicativo al telefono in base al carico del forno.</p>
+      </div>
+      <div class="panel panel-light reveal">
+        <div class="eyebrow">🛵 Domicilio — 3,00 €</div>
+        <h3>Consegna a casa</h3>
+        <p>Consegniamo nella zona di Nogara e paesi limitrofi. Costo di consegna 3,00 € a ordine, indipendentemente dall'importo.</p>
+      </div>
+      <div class="panel panel-light reveal">
+        <div class="eyebrow">Oggi da Tommy</div>
+        <div class="weather-widget">
+          <div class="weather-icon" id="weatherIcon">🍕</div>
+          <div>
+            <div class="weather-temp" id="weatherTemp">--°</div>
+            <div class="weather-place" id="weatherPlace">Ore 19:00 (indicativo)</div>
+          </div>
+        </div>
+        <div class="weather-suggest" id="weatherSuggest">Sto controllando il tempo…</div>
+      </div>
+    </div>
+
+    <div class="book-grid">
+      <form id="bookForm" class="reveal">
+        <div class="field-row">
+          <div class="field"><label for="fName">Nome e cognome</label><input id="fName" type="text" required placeholder="Mario Bianchi"></div>
+          <div class="field"><label for="fPhone">Telefono</label><input id="fPhone" type="tel" required placeholder="333 1234567"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="fDate">Data</label><input id="fDate" type="date" required></div>
+          <div class="field"><label for="fTime">Ora</label><input id="fTime" type="time" required></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="fPeople">Persone</label>
+            <select id="fPeople">
+              <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7+</option>
+            </select>
+          </div>
+          <div class="field"><label for="fNote">Note (allergie, seggiolone…)</label><input id="fNote" type="text" placeholder="Facoltativo"></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">📲 Invia richiesta su WhatsApp</button>
+      </form>
+      <div class="ticket-card reveal">
+        <h4>Comanda #<span id="ticketNum">104</span></h4>
+        <div id="ticketPreview">
+          <div class="ticket-placeholder">In attesa dei tuoi dati…</div>
+        </div>
+        <div class="confirm-box" id="confirmBox">
+          <p>✓ RICHIESTA PRONTA<br>Si è aperto WhatsApp con il messaggio compilato: inviacelo e ti confermiamo il tavolo appena possibile. Per urgenze, chiama direttamente lo +39 366 548 8260.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo footer-logo">Da <span>Tommy</span></div>
+        <p class="footer-desc">Pizzeria a conduzione familiare dal 1978. Forno a legna, impasto a lunga lievitazione, sempre la stessa famiglia.</p>
+      </div>
+      <div>
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="tel:+393665488260">☏ +39 366 548 8260</a></li>
+          <li><a href="mailto:studiomenny.web@gmail.com">studiomenny.web@gmail.com</a></li>
+          <li>Via P. Sterzi 41, Nogara (VR)</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Link rapidi</h5>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="prenota.html">Prenota</a></li>
+          <li><a href="galleria.html">Locale</a></li>
+          <li><a href="index.html#mappa">Dove siamo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Da Tommy · P.IVA 00000000000</span>
+      <span class="foot-legal"><a href="legale.html#note-legali">Note legali</a> · <a href="legale.html#privacy">Privacy</a> · <a href="legale.html#cookie">Cookie</a> · <button type="button" data-cookie-prefs>Preferenze cookie</button></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
