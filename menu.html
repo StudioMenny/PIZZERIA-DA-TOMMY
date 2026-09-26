@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menu · Da Tommy</title>
+<meta name="description" content="Le pizze cotte nel forno a legna e la cucina di Da Tommy. Componi la comanda e inviala su WhatsApp: ritiro o consegna a casa.">
+<meta name="theme-color" content="#2a130c">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Da Tommy">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://menny28.github.io/Da-Tommy/menu.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Da Tommy">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Menu · Da Tommy">
+<meta property="og:description" content="Le pizze cotte nel forno a legna e la cucina di Da Tommy. Componi la comanda e inviala su WhatsApp: ritiro o consegna a casa.">
+<meta property="og:url" content="https://menny28.github.io/Da-Tommy/menu.html">
+<meta property="og:image" content="https://menny28.github.io/Da-Tommy/images/margherita_appena_sfornata.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Menu · Da Tommy">
+<meta name="twitter:description" content="Le pizze cotte nel forno a legna e la cucina di Da Tommy. Componi la comanda e inviala su WhatsApp: ritiro o consegna a casa.">
+<meta name="twitter:image" content="https://menny28.github.io/Da-Tommy/images/margherita_appena_sfornata.jpeg">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="menu">
+<main>
+<section class="page-head photo-bg" style="--bg:url('images/margherita_appena_sfornata.jpeg')">
+  <div class="wrap">
+    <p class="kicker">Pizzeria e cucina</p>
+    <h1 data-split>Il menu</h1>
+    <p class="lead">Scegli, aggiungi alla comanda e mandacela su WhatsApp: la prepariamo per il ritiro o te la portiamo a casa, consegna 3 €.</p>
+  </div>
+</section>
+
+<div class="menu-bar">
+  <div class="wrap">
+    <div class="seg" id="tabs" role="group" aria-label="Sezione del menu">
+      <button type="button" data-tab="pizze" aria-pressed="true">Pizze</button>
+      <button type="button" data-tab="cucina" aria-pressed="false">Cucina</button>
+    </div>
+    <div class="tools" id="pizzaTools">
+      <label class="search"><span class="sr-only">Cerca una pizza</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Cerca per nome o ingrediente" autocomplete="off" enterkeyhint="search"></label>
+      <div class="chips" id="chips" role="group" aria-label="Filtri">
+        <button type="button" class="chip" data-f="tutte" aria-pressed="true">Tutte</button>
+        <button type="button" class="chip" data-f="veg" aria-pressed="false">Vegetariane</button>
+        <button type="button" class="chip" data-f="gf" aria-pressed="false">Senza glutine</button>
+        <button type="button" class="chip" data-f="hot" aria-pressed="false">Piccanti</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding-top:40px">
+  <div class="wrap">
+    <div id="pizzeWrap"><div class="pizza-grid" id="pizzaGrid"></div></div>
+    <div id="cucinaWrap" hidden><div class="kitchen" id="kitchen"></div></div>
+  </div>
+</section>
+
+<section class="section light" id="allergeni">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">Allergeni</h2>
+      <p class="lead rv" style="--i:1">Accanto a ogni piatto trovi i numeri degli allergeni presenti, secondo il Regolamento UE 1169/2011. Le pizze indicate come senza glutine si preparano con impasto dedicato.</p>
+    </div>
+    <ul class="allergen-list" id="allergenList"></ul>
+    <p style="margin-top:24px;color:var(--ink-soft);font-size:15px">Le informazioni sono indicative e possono cambiare con le forniture. Se hai un'allergia o un'intolleranza, dillo sempre al personale prima di ordinare.</p>
+  </div>
+</section>
+</main>
+
+<button type="button" class="cart-fab" id="cartFab" aria-label="Apri la comanda"><span class="count" id="cartCount">0</span><span>La comanda</span><span id="cartSum"></span></button>
+
+<div class="modal" id="pizzaModal" role="dialog" aria-modal="true" aria-label="Dettaglio pizza">
+  <button type="button" class="modal-close" aria-label="Chiudi">✕</button>
+  <div class="modal-card" id="pmBody"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
